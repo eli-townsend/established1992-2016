@@ -1,0 +1,214 @@
+/*** FONT FAMILY ***/
+
+@font-face {
+    font-family: 'gt_walsheim_regular';
+    src: url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-web.eot');
+    src: url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-web.eot"?#iefix') format('embedded-opentype'),
+         url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-web.woff') format('woff'),
+         url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-web.ttf') format('truetype'),
+         url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-web.svg#gt_walsheim_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*** BASE STYLE VARIABLES ***/
+:root{
+    --base:#bfbfbf;
+    --active:#00cc66;
+    --hover:#008040;
+}
+
+body{
+padding: 1em;
+margin: 0;
+background: url(../img/tree_bark.png);
+}
+
+#container{
+    background: #FFFFFF;
+    border-radius: 5px;
+    height: auto;
+    min-height: 100vh;
+    padding:1em;
+    color: var(--base);
+     font-family:gt_walsheim_regular; 
+    font-size: 1.1rem;
+    font-weight:300;
+}
+
+/*** NAVIGATION ***/
+#header{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.site-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#res-nav {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+    top: 2rem;
+    right: 2rem;
+}
+
+#res-nav span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--base);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#res-nav {
+}
+
+#res-nav span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#res-nav span:nth-child(2) {
+  top: 9px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#res-nav span:nth-child(3) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#res-nav.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -4px;
+  left: 8px;
+}
+
+#res-nav.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#res-nav.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 17px;
+  left: 7px;
+}
+
+/*** SECTIONS ***/
+
+.full-section{
+    max-width: 90%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.half-section{
+    max-width: 70%;
+    margin: 4rem auto;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.social-icons a{
+    margin-right: 0.4em;
+    font-size: 2.3rem;
+    text-decoration: none;
+}
+
+.browser{
+    background: var(--base);
+    border-radius: 5px;
+}
+img.workshop-image{
+    border-radius: 5px;
+    border-top: 24px;
+    border-bottom: 6px;
+    border-left: 6px;
+    border-right: 6px;
+    border-style: solid;
+    border-color: var(--base);
+}
+
+/*** TYPOGRAPHY/LINKS ***/
+
+h1,h2,h3,h4,h5,h6{
+    font-family:gt_walsheim_regular; 
+    font-weight: 600;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+a{
+  color: var(--active);
+}
+a:hover{
+color: var(--hover);
+}
+
+p{
+    line-height: 1.8rem;
+}
+
+/*** BUTTONS ***/
+.button {
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 0.85em 1em;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-family: gt_walsheim_regular;
+  background-color: var(--active);
+  color: #fff; }
+  [data-whatinput='mouse'] .button {
+    outline: 0; }
+  .button:hover, .button:focus {
+    background-color: var(--hover);
+    color: #fff; } 

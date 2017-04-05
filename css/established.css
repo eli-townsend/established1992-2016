@@ -8,13 +8,33 @@
     font-weight: normal;
     font-style: normal;
 }
-body{
-  font-family: gt_walsheim_regular;
-font-size: 1.1rem;
-font-weight:normal;
-padding-bottom: 3em;
+:root{
+    --base:#8c8c8c;
+    --active:#00cc66;
+    --hover:#008040;
 }
 
+body{
+padding: 1em;
+    margin: 0;
+background: url(../img/tree_bark.png);
+}
+#container{
+    background: #fff;
+    border-radius: 5px;
+    height: auto;
+    /*padding-top:3em;*/
+    color: var(--base);
+     font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif; 
+font-size: 1.1rem;
+font-weight:normal;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family:gt_walsheim_regular; 
+    font-weight: 700;
+}
 .title-bar {
   color: #3085a3;
   background: transparent;
@@ -23,24 +43,25 @@ padding-bottom: 3em;
 .top-bar {
   background: transparent;
   margin-bottom:30px;
-    box-shadow: 10px 10px #ccc;
+font-family:gt_walsheim_regular;
 }
   .top-bar ul {
     background: transparent; }
     .top-bar ul li {
       background: transparent; }
       .top-bar ul li a {
-        color: #ccc; }
+        color: var(--base);
+font-weight: 700;}
 .menu-text{
-  color: #ccc;
+  color: var(--base);
 }
 .responsive-menu-header{
-  color: #ccc;
+  color: var(--base);
   font-weight: 700;
   vertical-align: middle;
 }
 .top-bar >.menu-text {
-  color: #ccc; }
+  color: var(--base); }
   @media only screen and (max-width: 40em) {
     .menu-text {
       display: none !important;}
@@ -78,13 +99,6 @@ padding-bottom: 3em;
   margin-bottom:30px; }
 h1 {
   font-size: 1.25rem;
-  border-bottom:6px;
-  border-style:double;
-  border-color:#ccc;
-  border-right:0;
-  border-left:0;
-  border-top:0;
-  width:25px;
 }
 h1.portfolio-header{
   color: #333;
@@ -99,10 +113,10 @@ h4{
   font-size: 1.2rem;
 }
 a{
-  color: #3085a3;
+  color: var(--active);
 }
 a:hover{
-color: #3aa1c5;
+color: var(--hover);
 }
 .button {
   display: inline-block;
@@ -118,12 +132,12 @@ color: #3aa1c5;
   margin: 0 0 1rem 0;
   font-size: 1rem;
   font-family: gt_walsheim_regular;
-  background-color: #3085a3;
+  background-color: var(--active);
   color: #fff; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover, .button:focus {
-    background-color: #3aa1c5;
+    background-color: var(--hover);
     color: #fff; } 
       .menu-icon::after {
     content: '';
