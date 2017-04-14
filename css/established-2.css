@@ -16,12 +16,15 @@
     --base:#bfbfbf;
     --active:#00cc66;
     --hover:#008040;
+    
+    /* #33ccff - Good Light Blue */
 }
 
 body{
 padding: 1em;
 margin: 0;
 background: url(../img/tree_bark.png);
+      font-family:gt_walsheim_regular; 
 }
 
 #container{
@@ -40,6 +43,8 @@ background: url(../img/tree_bark.png);
 #header{
     width: 100%;
     margin-bottom: 5rem;
+    position: fixed;
+    z-index: 99999;
 }
 .site-title{
     font-size: 1.3rem;
@@ -49,7 +54,7 @@ background: url(../img/tree_bark.png);
 #res-nav {
   width: 30px;
   height: 30px;
-  position: absolute;
+  position: fixed;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -61,6 +66,7 @@ background: url(../img/tree_bark.png);
   cursor: pointer;
     top: 2rem;
     right: 2rem;
+    z-index: 999999;
 }
 
 #res-nav span {
@@ -143,29 +149,69 @@ background: url(../img/tree_bark.png);
 
 .half-section{
     max-width: 70%;
-    margin: 4rem auto;
+    margin: 5rem auto;
     padding-bottom: 1em;
     text-align: center;
 }
 
+
+/*** WORKSHOP ***/
+h1.lay-left{
+              float: left;
+          }
+          
+          .clear-fix{
+                content: "";
+                display: table;
+                clear: both;
+            }
+          .animated-row > *{
+              margin-right: 0.4em;
+          }
+          .rectangle-test{
+              height: 250px;
+              width: 350px;
+              border-radius: 8px;
+          }
+          .horizontal-rectangle-test{
+              height: auto;
+              width: 250px;
+              background: #555;
+              border-radius: 8px;
+              margin: 0 auto;
+              position: relative;
+              bottom:400px;
+              padding: 10px;
+              color: #FFF;
+          }
+          .left-animate{
+              position: relative;
+              top: 30px;
+              right: 0;
+              background: #33ccff;
+          }
+          .right-animate{
+              position: relative;
+              left: 450px;
+              bottom: 89px;
+              background: #86420e;
+          }
+          
+
+/*** MEDIA ***/
 .social-icons a{
     margin-right: 0.4em;
     font-size: 2.3rem;
     text-decoration: none;
 }
 
-.browser{
-    background: var(--base);
-    border-radius: 5px;
+img{
+    width: 100%;
 }
+
 img.workshop-image{
-    border-radius: 5px;
-    border-top: 24px;
-    border-bottom: 6px;
-    border-left: 6px;
-    border-right: 6px;
-    border-style: solid;
-    border-color: var(--base);
+    width: 300px;
+    height: 400px
 }
 
 /*** TYPOGRAPHY/LINKS ***/
@@ -181,6 +227,7 @@ h1 {
 
 a{
   color: var(--active);
+    text-decoration: none;
 }
 a:hover{
 color: var(--hover);
@@ -190,6 +237,10 @@ p{
     line-height: 1.8rem;
 }
 
+p.tiny{
+    font-weight: 200;
+}
+
 /*** BUTTONS ***/
 .button {
   display: inline-block;
@@ -197,18 +248,29 @@ p{
   line-height: 1;
   cursor: pointer;
   -webkit-appearance: none;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
   vertical-align: middle;
-  border: 1px solid transparent;
+  border: 2px solid var(--active);
   border-radius: 3px;
   padding: 0.85em 1em;
   margin: 0 0 1rem 0;
   font-size: 1rem;
   font-family: gt_walsheim_regular;
-  background-color: var(--active);
-  color: #fff; }
-  [data-whatinput='mouse'] .button {
-    outline: 0; }
+    background: #ffffff;
+  color: #CCCCCC; 
+transition: all 0.5s ease 0s;
+    max-width: 200px;
+    width: 200px;
+    height: 13px;
+}
+
   .button:hover, .button:focus {
-    background-color: var(--hover);
-    color: #fff; } 
+    color: var(--active); 
+    border:2px solid var(--active);
+    background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    #CCC 10px,
+    #CCC 20px
+  );
+} 
