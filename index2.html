@@ -4,81 +4,23 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="I am Elijah Townsend and I am a Front-End Developer. I create websites and web-based applications.">
+    <meta name="description" content="Hello, I am Elijah Townsend and I am a Front-End Developer with 6 years of professional experience!">
     <meta name="keywords" content="HTML,CSS,Elijah,Townsend,Developer,JavaScript, Front, End, Portfolio">
     <meta name="author" content="Elijah Townsend">
     <title>Est.1992 - Elijah Townsend</title>
-    <link rel="stylesheet" href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" />
-	  <link rel="stylesheet" href="css/aos.css" />
+      <link rel="stylesheet" href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" />
+      <link rel="stylesheet" href="css/normalize.css"/>
+      <link rel="stylesheet" href="css/skeleton.css"/>
       <link rel="stylesheet" href="css/established-2.css" />
       <style>
-          #main-navigation{
-              position: fixed;
-              top: -3000px;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: #fff;
-              background-size: cover;
-              z-index: 99999;
-              margin: 0;
-              padding: 0;
-              overflow: hidden;
-               -webkit-transition: top 0.5s ease-in-out;
-    -moz-transition: top 0.5s ease-in-out;
-    -o-transition: top 0.5s ease-in-out;
-    -ms-transition: top 0.5s ease-in-out;
-    transition: top 0.5s ease-in-out;
-              
-          }
-          #main-navigation.open{
-               display: flex;
-  align-items: center;
-  justify-content: center;
-              top: 0;
-          }
-          #main-navigation a{
-              text-decoration: none;
-              margin-right: 0.4em;
-            font-size: 2.3rem;
-          }
-          #main-navigation a:hover{
-              color: #00cc66;
-              /*text-decoration: line-through;
-             text-decoration-style:wavy;
-             text-decoration-color: #333;*/
-              background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                #CCC 10px, 
-                #CCC 20px
-              );
-          }
-         #main-navigation > #nav-links > a.active-nav-selection{
-              text-decoration: line-through;
-             text-decoration-style:wavy;
-             text-decoration-color: #333;
-          }
-          #main-navigation > #nav-links > a.active-nav-selection:hover{
-              background: none;
-              cursor: default;
-          }
-          @media (max-width: 600px) {
-              #main-navigation.open{
-               display: flex;
-                align-items: auto;
-                justify-content: center;
-              top: 0;
-          }
-          }
+
       </style>
    </head>
-    
-    
-    
-  <body>  
-        
+
+
+
+  <body>
+
         <div id="main-navigation">
             <div id="nav-links">
                 <a href="#" class="active-nav-selection">Home</a>
@@ -87,25 +29,25 @@
                 <a href="#">Connect</a>
             </div>
         </div>
-      
+
       <div id="container">
         <div id="header">
-            
+
             <div id="site-title">Est.1992</div>
             <div id="res-nav">
               <span></span>
               <span></span>
               <span></span>
             </div>
-            
-        </div>
-        
-        
 
-	<div id="profile" class="half-section">
+        </div>
+
+
+
+	<div id="profile" class="center-row">
 		<h1>Autobiography</h1>
 		<p>Hello, I am Elijah Townsend and I am a Front-End Developer with 6 years of professional experience. I focus on simplicity, the user, and interactivity. When I am not developing, I am attempting to play the guitar or working hands on glass and wood, anything design and working at a thai massage parlour, tying massages together.</p>
-        
+
 				<div class="social-icons">
 					<a href="https://dribbble.com/ElijahTownsend" target="_blank" class="fa fa-dribbble fa-lg"></a>
 					<a href="https://www.linkedin.com/in/elijah-townsend-55017b50" target="_blank" class="fa fa-linkedin fa-lg"></a>
@@ -114,35 +56,57 @@
 					<a href="https://github.com/eli-townsend" target="_blank" class="fa fa-github fa-lg"></a>
 				</div>
 	</div>
-          
-          
-    <div id="workshop" class="half-section">
-        <h1 class="lay-left">Workshop</h1><div class="clear-fix"></div>
-        <div class="animated-row">
-            <div class="rectangle-test left-animate" data-aos="fade-leftt"></div>
-            <div class="rectangle-test right-animate" data-aos="fade-right"></div>
-            <div class="horizontal-rectangle-test">
-                <h3>Make A Living</h3>
-                <p class="tiny">Jerky spare ribs cow ground round swine. Chuck prosciutto meatloaf frankfurter, picanha pancetta shank tri-tip chicken leberkas capicola doner cow. Tri-tip pork loin cupim capicola flank, ham hock turkey strip steak frankfurter kielbasa cow beef meatloaf alcatra chuck. Beef pig jowl bresaola venison t-bone.</p>
-                <div class="button-row">
-                    <a class="button" href="#">View All</a>
-                </div>
-            </div>
+
+          <div class="sbreak"></div>
+
+    <div id="workshop" class="row">
+       <h1>Workshop</h1>
+        <div class="bg-rectangle">
+            <label>Don't be afraid to fail,<br/>
+                be afraid to not try.<br/>
+            - Michael Jordan</label>
+            <a href="#" class="rect-button">View Workshop</a>
+            <img src="img/ipad-winston.png" alt="" class="pos-1"/>
         </div>
-    </div>    
-        
-        
-        
+        <img src="img/desk-winston.png" alt="" class="pos-2"/>
     </div>
-      <script src="js/aos.js"></script>
+
+
+    <div class="sbreak"></div>
+
+<div id="projects" class="row">
+ <h1>Projects</h1>
+  <div class="bg-rectangle">
+      <label>Design is not just what it<br/>
+        looks like and feels like.<br/>
+        Design is how it works.<br/>
+      - Steve Jobs</label>
+      <a href="#" class="rect-button">View Projects</a>
+      <img src="img/ipad-winston.png" alt="" class="pos-1"/>
+  </div>
+  <img src="img/desk-winston.png" alt="" class="pos-2"/>
+</div>
+
+<div class="sbreak"></div>
+
+<div id="contact" class="center-row">
+ <h1>Contact</h1>
+</div>
+
+
+
+        <div class="cross"><a href="#"><img src="img/cross.svg" alt="cross"/></a></div>
+    </div>
+
       <script>
-          function classToggle() {
+          function navToggle() {
             var mainNav = document.querySelector('#main-navigation');
             var navIcon = document.querySelector('#res-nav');
             mainNav.classList.toggle('open');
             navIcon.classList.toggle('open');
           }
-            document.querySelector('#res-nav').addEventListener('click', classToggle);
+            document.querySelector('#res-nav').addEventListener('click', navToggle);
+
       </script>
   </body>
 </html>
