@@ -12,8 +12,27 @@
       <link rel="stylesheet" href="css/normalize.css"/>
       <link rel="stylesheet" href="css/skeleton.css"/>
       <link rel="stylesheet" href="css/established-2.css" />
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
       <style>
-
+@media (max-width:700px){
+  .bg-rectangle{
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    z-index: 5;
+  }
+  .pos-1{
+    left: -78px;
+    width: 60%;
+    z-index: 1;
+    display: none;
+  }
+  .pos-2{
+    display: none;
+  }
+}
       </style>
    </head>
 
@@ -44,9 +63,9 @@
 
 
 
-	<div id="profile" class="center-row">
+	<div id="profile" class="center-row" data-scroll-speed="2">
 		<h1>Autobiography</h1>
-		<p>Hello, I am Elijah Townsend and I am a Front-End Developer with 6 years of professional experience. I focus on simplicity, the user, and interactivity. When I am not developing, I am attempting to play the guitar or working hands on glass and wood, anything design and working at a thai massage parlour, tying massages together.</p>
+		<p>Hello, I am Elijah Townsend and I am a UI Developer/UX Designer with 6 years of professional experience. I focus on simplicity, the user, and interactivity. When I am not developing, I am attempting to play the guitar or being outdoors, anything design and working at a thai massage parlour, tying massages together.</p>
 
 				<div class="social-icons">
 					<a href="https://dribbble.com/ElijahTownsend" target="_blank" class="fa fa-dribbble fa-lg"></a>
@@ -60,15 +79,15 @@
           <div class="sbreak"></div>
 
     <div id="workshop" class="row">
-       <h1>Workshop</h1>
-        <div class="bg-rectangle">
+       <h1 data-scroll-speed="2">Workshop</h1>
+        <div class="bg-rectangle" data-scroll-speed="2">
             <label>Don't be afraid to fail,<br/>
                 be afraid to not try.<br/>
             - Michael Jordan</label>
             <a href="#" class="rect-button">View Workshop</a>
-            <img src="img/ipad-winston.png" alt="" class="pos-1"/>
+            <img src="img/ipad-winston.png" alt="" class="pos-1" data-scroll-speed="4"/>
         </div>
-        <img src="img/desk-winston.png" alt="" class="pos-2"/>
+        <img src="img/desk-winston.png" alt="" class="pos-2" data-scroll-speed="4"/>
     </div>
 
 
@@ -76,37 +95,78 @@
 
 <div id="projects" class="row">
  <h1>Projects</h1>
-  <div class="bg-rectangle">
-      <label>Design is not just what it<br/>
-        looks like and feels like.<br/>
-        Design is how it works.<br/>
-      - Steve Jobs</label>
-      <a href="#" class="rect-button">View Projects</a>
-      <img src="img/ipad-winston.png" alt="" class="pos-1"/>
-  </div>
-  <img src="img/desk-winston.png" alt="" class="pos-2"/>
+ <label>Design is not just what it <br/>
+   looks like and feels like.<br/>
+   Design is how it works.<br/>
+ - Steve Jobs</label>
+ <img src="img/poster.jpg" alt="" class="pos-2-zindex" data-scroll-speed="4"/>
+ <a href="#" class="rect-button-two">View Projects</a>
 </div>
 
 <div class="sbreak"></div>
 
 <div id="contact" class="center-row">
  <h1>Contact</h1>
+ <form>
+   <span class="input input--est1992">
+   					<input class="input__field input__field--est1992" type="text" id="email">
+   					<label class="input__label input__label--est1992" for="email">
+   						<span class="input__label-content input__label-content--est1992">Email</span>
+   					</label>
+   				</span>
+          <span class="input input--est1992">
+          					<textarea class="input__field input__textarea--est1992" type="text" id="message"></textarea>
+          					<label class="input__label input__label--est1992" for="message">
+          						<span class="input__label-content input__label-content--est1992">Message</span>
+          					</label>
+          				</span><br/>
+                  <button type="submit">Submit</button>
+</form>
 </div>
 
+<div class="sbreak"></div>
+
+<div id="footer">
+&copy; Established 1992. All Rights Reserved
+</div>
 
 
         <div class="cross"><a href="#"><img src="img/cross.svg" alt="cross"/></a></div>
     </div>
+    <script>
+    $.fn.moveIt = function(){
+  var $window = $(window);
+  var instances = [];
 
-      <script>
-          function navToggle() {
-            var mainNav = document.querySelector('#main-navigation');
-            var navIcon = document.querySelector('#res-nav');
-            mainNav.classList.toggle('open');
-            navIcon.classList.toggle('open');
-          }
-            document.querySelector('#res-nav').addEventListener('click', navToggle);
+  $(this).each(function(){
+    instances.push(new moveItItem($(this)));
+  });
 
-      </script>
+  window.onscroll = function(){
+    var scrollTop = $window.scrollTop();
+    instances.forEach(function(inst){
+      inst.update(scrollTop);
+    });
+  }
+}
+
+var moveItItem = function(el){
+  this.el = $(el);
+  this.speed = parseInt(this.el.attr('data-scroll-speed'));
+};
+
+moveItItem.prototype.update = function(scrollTop){
+  this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
+};
+
+// Initialization
+$(function(){
+  $('[data-scroll-speed]').moveIt();
+});
+    </script>
+
+      <script src="js/app.js"></script>
+      <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-43819097-1','established1992.com');ga('send','pageview');</script>
+
   </body>
 </html>
