@@ -4,56 +4,186 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="I am Elijah Townsend and I am a Front-End Developer. I create websites and web-based applications.">
+    <meta name="description" content="Hello, I am Elijah Townsend and I am a Front-End Developer with 6 years of professional experience!">
     <meta name="keywords" content="HTML,CSS,Elijah,Townsend,Developer,JavaScript, Front, End, Portfolio">
     <meta name="author" content="Elijah Townsend">
-    <title>Est 1992 - Elijah Townsend</title>
-    <link rel="stylesheet" href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" />
-	  <link rel="stylesheet" href="css/established.css" />
+    <title>Est.1992 - Elijah Townsend</title>
+      <link rel="stylesheet" href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" />
+      <link rel="stylesheet" href="css/normalize.css"/>
+      <link rel="stylesheet" href="css/skeleton.css"/>
+      <link rel="stylesheet" href="css/established.css" />
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
    </head>
+
+
+
   <body>
-<div id="container">
-<div class="container-row top-bar" id="main-menu">
-  <div class="top-bar-title">
-    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-      <span class="menu-icon dark" data-toggle></span> <span class="responsive-menu-header">Est.1992</span>
-    </span>
-  </div>
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Est.1992</li>
-    </ul>
-  </div>
-  <div id="responsive-menu">
-  <div class="top-bar-right">
-    <ul class="vertical medium-horizontal dropdown menu">
-      <li><a href="#profile">Profile</a></li>
-      <li><a href="#workshop">Workshop</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="http://blog.established1992.com" target="_blank">Journal</a></li>
-    </ul>
-  </div>
-</div>
-</div>
 
-	<div id="profile" class="autobiography container-column">
+        <div id="main-navigation">
+            <div id="nav-links">
+                <a href="index.html" class="active-nav-selection">Home</a>
+                <a href="workshop.html">Workshop</a>
+                <a href="projects.html">Projects</a>
+                <a href="http://blog.established1992.com/" target="_blank">Journal</a>
+            </div>
+        </div>
+
+
+      <div id="container">
+        <div id="header">
+
+            <div id="site-title">Est.1992</div>
+            <div id="res-nav">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+        </div>
+
+
+
+	<div id="profile" class="center-row" data-scroll-speed="2">
 		<h1>Autobiography</h1>
-		<p>Hello, I'm Elijah Townsend and I am a front-end developer. I focus on user experience, web development and visual design. I enjoy attempting to play the guitar, reading books, anything design and working at a thai massage parlour, tying massages together.</p>
-				<ul class="menu">
-					<li><a href="https://dribbble.com/ElijahTownsend" target="_blank" class="fa fa-dribbble fa-lg"></a></li>
-					<li><a href="https://www.linkedin.com/in/elijah-townsend-55017b50" target="_blank" class="fa fa-linkedin fa-lg"></a></li>
-					<li><a href="https://www.instagram.com/elijahtownsend/" target="_blank" class="fa fa-instagram fa-lg"></a></li>
-					<li><a href="https://www.behance.net/ElijahTown7ddb" target="_blank" class="fa fa-behance fa-lg"></a></li>
-					<li><a href="https://github.com/eli-townsend" target="_blank" class="fa fa-github fa-lg"></a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-   
-    
-    </div>
-    
-       <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-43819097-1','established1992.com');ga('send','pageview');</script>
+		<p>Hello, I am Elijah Townsend and I am a Front-End Developer/UX Designer with 6 years of professional experience. I focus on simplicity, minimalism, the user, and interactivity. When I am not developing, I am attempting to play the guitar or being outdoors, and working at a thai massage parlour, tying massages together.</p>
 
+				<div class="social-icons">
+					<a href="https://dribbble.com/ElijahTownsend" target="_blank" class="fa fa-dribbble fa-lg"></a>
+					<a href="https://www.linkedin.com/in/elijah-townsend-55017b50" target="_blank" class="fa fa-linkedin fa-lg"></a>
+					<a href="https://www.instagram.com/elijahtownsend/" target="_blank" class="fa fa-instagram fa-lg"></a>
+					<a href="https://www.behance.net/ElijahTown7ddb" target="_blank" class="fa fa-behance fa-lg"></a>
+					<a href="https://github.com/eli-townsend" target="_blank" class="fa fa-github fa-lg"></a>
+				</div>
+	</div>
+
+          <div class="sbreak clear-fix"></div>
+
+      <!--<div id="workshop">
+            <div class="row" data-scroll-speed="3">
+              <div class="one-half columns">
+                <h1>Workshop</h1>
+                <p>Don't be afraid to fail,<br/>
+                    be afraid to not try.<br/>
+                - Michael Jordan</p><br/>
+                <a href="#" class="button">All Work</a>
+              </div>
+              <div class="one-half columns">
+                <img src="img/winstonland.jpg" alt="" width="600px" height="400px" style="position:relative;z-index:2; width: 100%; height: auto;" class="home-img-right fade-it" data-scroll-speed="2" />
+                <i class="fa fa-desktop fade-it" aria-hidden="true" style="color:#fff;font-size:5em;position:relative;top:-250px;z-index1:1;"></i>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="projects">
+            <div class="row">
+              <div class="one-half columns">
+                <img src="img/volcano.jpg" alt="" width="600px" height="400px" style="position:relative;z-index:2; width: 100%; height: auto;" class="home-img-left" data-scroll-speed="4" />
+                <i class="fa fa-eyedropper" aria-hidden="true" style="color:#fff;font-size:5em;position:relative;top:-250px;z-index1:1;"></i>
+              </div>
+              <div class="one-half columns">
+                <h1>Projects</h1>
+                <p>To look ahead<br/>
+                  one must learn<br/>
+                  to look back.<br/>
+                - Henry Dreyfuss</p><br/>
+                <a href="#" class="button">All Projects</a>
+              </div>
+            </div>
+          </div>-->
+
+          <div class="workshop row">
+            <div class="left-side one-half columns" data-scroll-speed="5">
+                <img src="img/winstonland.jpg" id="fade-it" alt="" width="600px" height="400px"  />
+            </div>
+            <div class="right-side one-half columns" data-scroll-speed="2">
+              <h1>Workshop</h1>
+              <p>To look ahead<br/>
+                one must learn<br/>
+                to look back.<br/>
+              - Henry Dreyfuss</p><br/>
+              <a href="#" class="button">View Work</a>
+            </div>
+          </div>
+
+<div class="clear-fix sbreak"></div>
+
+          <div class="projects row">
+            <div class="left-side one-half columns" data-scroll-speed="2">
+              <h1>Projects</h1>
+              <p>Don't be afraid to fail,<br/>
+                  be afraid to not try.<br/>
+              - Michael Jordan</p><br/>
+              <a href="#" class="button">View Projects</a>
+            </div>
+            <div class="right-side one-half columns" data-scroll-speed="7">
+              <img src="img/odmoveland.jpg" id="fade-it-not" alt="" width="600px" height="400px"  />
+            </div>
+          </div>
+
+
+<div class="nbreak clear-fix"></div>
+<div id="contact" class="center-row">
+  <div class="contact-info" id="fade-it-not-not">
+    Will Work For Food<br/>
+    Elijah Townsend<br/>
+    (828) 773-9730<br/>
+    <a href="mailto:info@established1992.com">info@established1992.com</a>
+  </div>
+</div>
+
+<div class="sbreak"></div>
+<div class="cross"><a href="#"><img src="img/cross.svg" alt="cross"/></a></div>
+<footer>
+&copy; Established 1992. All Rights Reserved
+</footer>
+    </div>
+
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+      	<script src="js/jquery.superscrollorama.js"></script>
+    <script>
+    		$(document).ready(function() {
+    			var controller = $.superscrollorama();
+    			controller.addTween('#fade-it', TweenMax.from( $('#fade-it'), .5, {css:{opacity: 0}}));
+          controller.addTween('#fade-it-not', TweenMax.from( $('#fade-it-not'), .25, {css:{opacity: 0}}));
+          controller.addTween('#fade-it-not-not', TweenMax.from( $('#fade-it-not-not'), .50, {css:{opacity: 0}}));
+    		});
+    	</script>
+   <script>
+    $.fn.moveIt = function(){
+  var $window = $(window);
+  var instances = [];
+
+  $(this).each(function(){
+    instances.push(new moveItItem($(this)));
+  });
+
+  window.onscroll = function(){
+    var scrollTop = $window.scrollTop();
+    instances.forEach(function(inst){
+      inst.update(scrollTop);
+    });
+  }
+}
+
+var moveItItem = function(el){
+  this.el = $(el);
+  this.speed = parseInt(this.el.attr('data-scroll-speed'));
+};
+
+moveItItem.prototype.update = function(scrollTop){
+  this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
+};
+
+// Initialization
+$(function(){
+  $('[data-scroll-speed]').moveIt();
+});
+
+
+
+    </script>
+
+      <script src="js/app.js"></script>
   </body>
 </html>
