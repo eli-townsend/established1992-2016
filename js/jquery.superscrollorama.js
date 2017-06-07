@@ -11,8 +11,6 @@
 	Thanks to Jan Paepke (@janpaepke) for making many nice improvements
 */
 
-(function($) {
-
 	$.superscrollorama = function(options) {
 
 		var superscrollorama = {};
@@ -468,4 +466,4 @@
 		return superscrollorama;
 	};
 
-})(jQuery);
+(jQuery);

@@ -272,23 +272,41 @@ li.circular-color{
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
+
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  -webkit-transform: translate3d(0, -50px, 0);
+  -ms-transform: translate3d(0, -50px, 0);
+  transform: translate3d(0, -50px, 0);
+
+  -webkit-transition: -webkit-transform .5s ease-out;
+  -ms-transition: -webkit-transform .5s ease-out;
+  transition: transform .5s ease-out;
 }
 
-.pace-inactive {
-  display: none;
+.pace.pace-active {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .pace .pace-progress {
-  background-color: rgb(0,204,102);
+  display: block;
   position: fixed;
-  z-index: 99999;
+  z-index: 2000;
   top: 0;
   right: 100%;
-  bottom: 0;
   width: 100%;
+  height: 10px;
+  background: var(--active);
+  pointer-events: none;
 }
 
 .social-icons a{
@@ -379,10 +397,10 @@ footer{
 
 
 .workshop{
-  position: relative;
-  min-width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
+  width: auto;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .left-side{
   max-height: 400px;
@@ -405,7 +423,7 @@ footer{
 .left-side > img{
   border-radius: 5px;
   max-height: 400px;
-  max-width: 5560px;
+  max-width: 600px;
 }
 .right-side{
   height: 400px;
@@ -424,10 +442,10 @@ footer{
 }
 
 .projects{
-  position: relative;
-min-width: 100%;
-max-width: 960px;
-margin: 0 auto;}
+  width: auto;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;}
 
 .projects > .right-side{
   max-height: 400px;
@@ -450,7 +468,7 @@ margin: 0 auto;}
 }
 .projects >  .right-side > img{
   border-radius: 5px;
-  max-height: 400px;
+  min-height: 400px;
   max-width: 600px;
 }
 .projects > .left-side{
@@ -469,32 +487,6 @@ margin: 0 auto;}
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (max-width: 550px) {
-  .left-side{
-    max-height: 400px;
-    max-width: 100%;
-    background: #bfbfbf;
-    color:#fff;
-    margin-bottom: -15px;
-    top: 0;
-    left: 0;
-  }
-  .right-side{
-    top: 0;
-    right: 0;
-  }
-
-  .projects > .right-side{
-    top: 0;
-    right: 0;
-  }
-  .projects > .left-side{
-    max-height: 400px;
-    background: #bfbfbf;
-    color:#fff;
-    margin-bottom: -15px;
-    top: 0;
-    left: 0;
-  }
   .one-half.columns {margin-left: 0;margin-bottom: 0;text-align: center;border-radius: 5px;}
   .contact-info{
     font-size: 5vw;
@@ -517,6 +509,10 @@ margin: 0 auto;}
   .cross a{
     cursor: crosshair;
   }
+  .contact-info{
+    font-size: 4vw;
+    line-height: 1.5em;
+  }
 }
 
 
@@ -538,7 +534,49 @@ margin: 0 auto;}
    }
    #main-navigation a:hover{
        color: #00cc66;
-       background: transparent;}
+       background: transparent;
+     }
+       .left-side{
+         max-height: 400px;
+         max-width: 100%;
+         background: repeating-linear-gradient(
+           135deg,
+           transparent,
+           transparent 10px,
+           #CCC 10px,
+           #CCC 20px
+         );
+         color:#fff;
+         margin-bottom: -15px;
+         top: 0;
+         left: 0;
+       }
+       .right-side{
+         top: 0;
+         right: 0;
+       }
+
+       .projects > .right-side{
+         top: 0;
+         right: 0;
+         max-height: 400px;
+         max-width: 100%;
+         background: repeating-linear-gradient(
+           135deg,
+           transparent,
+           transparent 10px,
+           #CCC 10px,
+           #CCC 20px
+         );
+       }
+       .projects > .left-side{
+         max-height: 400px;
+         background: #bfbfbf;
+         color:#fff;
+         margin-bottom: -15px;
+         top: 0;
+         left: 0;
+       }
    .cross {
        position: static;
        padding-right: 1em;
