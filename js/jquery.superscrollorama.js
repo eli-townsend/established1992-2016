@@ -18,7 +18,7 @@
 			isVertical:true,		// are we scrolling vertically or horizontally?
 			triggerAtCenter: true,	// the animation triggers when the respective Element's origin is in the center of the scrollarea. This can be changed here to be at the edge (-> false)
 			playoutAnimations: true,	// when scrolling past the animation should they be played out (true) or just be jumped to the respective last frame (false)? Does not affect animations where duration = 0
-			reverse: true			// make reverse configurable so you don't have to pass it in for every tween to reverse globally
+			reverse: false			// make reverse configurable so you don't have to pass it in for every tween to reverse globally
 		};
 		superscrollorama.settings = $.extend({}, defaults, options);
         var $window = $(window);

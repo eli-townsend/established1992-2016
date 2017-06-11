@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/skeleton.css" />
 	  <link rel="stylesheet" href="css/established.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
    </head>
   <body>
     <div id="main-navigation">
@@ -51,7 +52,7 @@
 </div>
 </div>
 <div class="clear-fix"></div>
-<div class="u-full-width grayscale-hover">
+<div class="u-full-width grayscale-hover" id="fade-it">
 <div class="one-half columns">
   <a href="odfl.html"><img src="img/odflland.jpg" alt="" width="600px" height="400px"/></a>
   <h3>ODFL</h3>
@@ -65,7 +66,7 @@
 </div>
 
 <div class="clear-fix"></div>
-<div class="u-full-width grayscale-hover">
+<div class="u-full-width grayscale-hover" id="fade-it-not">
 <div class="one-half columns">
   <a href="meatcamp.html"><img src="img/meatcampland.jpg" alt="" width="600px" height="400px"/></a>
   <h3>Meat Camp Church</h3>
@@ -84,7 +85,16 @@
 
 
 </div>
-
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script src="js/jquery.superscrollorama.js"></script>
+<script>
+$(document).ready(function() {
+  var controller = $.superscrollorama();
+  controller.addTween('#fade-it', TweenMax.from( $('#fade-it'), .5, {css:{opacity: 0}}));
+  controller.addTween('#fade-it-not', TweenMax.from( $('#fade-it-not'), .25, {css:{opacity: 0}}));
+  controller.addTween('#fade-it-not-not', TweenMax.from( $('#fade-it-not-not'), .50, {css:{opacity: 0}}));
+});
+</script>
 <script src="js/app.js"></script>
   </body>
 </html>

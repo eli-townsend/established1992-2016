@@ -64,9 +64,8 @@
             </div>
             <div class="right-side one-half columns" data-scroll-speed="2">
               <h1>Workshop</h1>
-              <p>"To look ahead<br/>
-                one must learn<br/>
-                to look back."<br/>
+              <p>"To look ahead one<br/>
+                must learn to look back."<br/>
               - Henry Dreyfuss</p><br/>
               <a href="workshop.html" class="button">View Work</a>
             </div>
@@ -75,15 +74,15 @@
 <div class="sbreak clear-fix"></div>
 
           <div class="projects row">
-            <div class="left-side one-half columns" data-scroll-speed="2">
+            <div class="left-side one-half columns" data-scroll-speed="7">
+              <img src="img/365land.jpg" id="fade-it-not" alt="" width="600px" height="400px"  />
+            </div>
+            <div class="right-side one-half columns" data-scroll-speed="2">
               <h1>Projects</h1>
               <p>"Don't be afraid to fail,<br/>
                   be afraid to not try."<br/>
               - Michael Jordan</p><br/>
               <a href="projects.html" class="button">View Projects</a>
-            </div>
-            <div class="right-side one-half columns" data-scroll-speed="7">
-              <img src="img/365land.jpg" id="fade-it-not" alt="" width="600px" height="400px"  />
             </div>
           </div>
 
@@ -106,7 +105,7 @@
     </div>
 
     <script type="text/javascript" src="js/TweenMax.min.js"></script>
-      	<script src="js/jquery.superscrollorama.js" id="hide-down"></script>
+      	<script src="js/jquery.superscrollorama.js"></script>
         <script src="js/data-scroll.js"></script>
     <script>
     		$(document).ready(function() {
@@ -116,11 +115,39 @@
           controller.addTween('#fade-it-not-not', TweenMax.from( $('#fade-it-not-not'), .50, {css:{opacity: 0}}));
     		});
 
-        $(window).resize(function() {
-         if ($(this).width() > 750) {
-           $("body").remove("#hide-down");
-         }
+$(window).resize(function() {
+        if( $(window).width() < 750 ) {
+        $('[data-scroll-speed]').val("");
+        };
       });
+
+      /*  var rSize;
+
+        $(window).resize(function() {
+          clearTimeout(rSize);
+          rSize = setTimeout(reSizing, 500);
+        });
+
+        function reSizing(){
+          if( $(window).width() > 750 ) {
+            $("#testScriptName").remove();
+           var head = document.getElementsByTagName('head')[0];
+
+           script = document.createElement('script');
+           script.src = "js/data-scroll.js";
+           script.type = "text/javascript";
+           script.id = "testScriptName";
+
+           head.appendChild(script);
+        } else {
+
+          $("#testScriptName").remove();
+
+
+
+        }
+      }*/
+
     	</script>
       <script src="js/app.js"></script>
   </body>
