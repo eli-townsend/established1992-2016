@@ -12,11 +12,87 @@
       <link rel="stylesheet" href="css/normalize.css"/>
       <link rel="stylesheet" href="css/skeleton.css"/>
       <link rel="stylesheet" href="css/established.css" />
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <style>
+      #desktop{
+        height: auto;
+        width: 100%;
+        max-width: 600px;
+        background: rgba(191,191,191,0.7);
+        padding-bottom: 15px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .desktop-circles{
+        list-style: none;
+        margin: 0 0 5px 5px;
+        padding: 0;
+      }
+
+      .desktop-circles > li{
+        display: inline-block;
+        margin-right:1px;
+      }
+
+      li.circular-corner{
+        border-radius:50%;
+        width:10px;
+        height:10px;
+      }
+      a.left-vert{
+        -ms-transform: rotate(270deg);
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+        display: inline-block;
+        float: left;
+        margin-top: -250px;
+      }
+      a.right-vert{
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        display: inline-block;
+        float: right;
+        margin-top: -250px;
+      }
+      @media (max-width: 915px) {
+        #desktop{
+          margin-bottom: 1em;
+        }
+        a.left-vert{
+          -ms-transform: rotate(0);
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+          display: inline-block;
+          float: left;
+          margin-top: 0;
+        }
+        a.right-vert{
+          -ms-transform: rotate(0);
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+          display: inline-block;
+          float: right;
+          margin-top: 0;
+        }
+        a.right-vert > i.fa-long-arrow-left{
+          -ms-transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+          display: inline-block;
+          float: right;
+          margin-left: 4px;
+          margin-top: 3px;
+        }
+      }
+      @media (max-width: 428px) {
+        a.left-vert,a.right-vert{
+          width: auto;
+          padding: 12px 10px;
+        }
+      }
+      </style>
    </head>
-
-
-
   <body>
 
         <div id="main-navigation">
@@ -43,9 +119,9 @@
 
 
 
-	<div id="profile" class="center-row" data-scroll-speed="2">
+	<div id="profile" class="center-row">
 		<h1>Autobiography</h1>
-		<p>Hello, I am Elijah Townsend and I am a Front-End Developer/UX Designer with 6 years of professional experience. I focus on simplicity, minimalism, the user, and interactivity. When I am not developing, I am attempting to play the guitar or being outdoors, and working at a thai massage parlour, tying massages together.</p>
+		<p>Hello, I am Elijah Townsend and I am a Front-End Developer/UX Designer with 6 years of professional experience. I focus on simplicity, minimalism, the user, and interactivity. When not designing, I am attempting to play the guitar or anything outdoors. Get outside or get coding!</p>
 
 				<div class="social-icons">
 					<a href="https://dribbble.com/ElijahTownsend" target="_blank" class="fa fa-dribbble"></a>
@@ -58,38 +134,24 @@
 
           <div class="sbreak clear-fix"></div>
 
-          <div class="workshop row">
-            <div class="left-side one-half columns" data-scroll-speed="5">
-                <img src="img/winstonland.jpg" id="fade-it" alt="" width="600px" height="400px"  />
-            </div>
-            <div class="right-side one-half columns" data-scroll-speed="2">
-              <h1>Workshop</h1>
-              <p>"To look ahead one<br/>
-                must learn to look back."<br/>
-              - Henry Dreyfuss</p><br/>
-              <a href="workshop.html" class="button">View Work</a>
-            </div>
-          </div>
+<div id="desktop-section">
+<div id="desktop">
+  <ul class="desktop-circles">
+    <li class="circular-corner" style="background:#ee6b5f;"></li>
+    <li class="circular-corner" style="background:#f6bf4f;"></li>
+    <li class="circular-corner" style="background:#60c655;"></li>
+  </ul>
+  <img class="desktopSlides" src="img/desktop1.jpg" />
+<img class="desktopSlides" src="img/desktop2.jpg" />
+<img class="desktopSlides" src="img/desktop3.jpg" />
+</div>
+<a href="workshop.html" class="left-vert button"><i class="fa fa-long-arrow-left fa-3" aria-hidden="true"></i> Visit Workshop</a>
+<a href="projects.html" class="right-vert button"><i class="fa fa-long-arrow-left fa-3" aria-hidden="true"></i> View Projects</a>
+</div>
 
 <div class="sbreak clear-fix"></div>
-
-          <div class="projects row">
-            <div class="left-side one-half columns" data-scroll-speed="7">
-              <img src="img/365land.jpg" id="fade-it-not" alt="" width="600px" height="400px"  />
-            </div>
-            <div class="right-side one-half columns" data-scroll-speed="2">
-              <h1>Projects</h1>
-              <p>"Don't be afraid to fail,<br/>
-                  be afraid to not try."<br/>
-              - Michael Jordan</p><br/>
-              <a href="projects.html" class="button">View Projects</a>
-            </div>
-          </div>
-
-
-<div class="nbreak clear-fix"></div>
 <div id="contact" class="center-row">
-  <div class="contact-info" id="fade-it-not-not">
+  <div class="contact-info">
     Will Work For Food<br/>
     Elijah Townsend<br/>
     (828) 773-9730<br/>
@@ -98,57 +160,42 @@
 </div>
 
 <div class="sbreak"></div>
-<div class="cross"><a href="#"><img src="img/cross.svg" alt="cross"/></a></div>
+<div class="cross"><img src="img/cross.svg" alt="cross"/></div>
 <footer>
 &copy; Established 1992. All Rights Reserved
 </footer>
     </div>
+<script>
+var slideIndex = 0;
+carousel();
 
-    <script type="text/javascript" src="js/TweenMax.min.js"></script>
-      	<script src="js/jquery.superscrollorama.js"></script>
-        <script src="js/data-scroll.js"></script>
-    <script>
-    		$(document).ready(function() {
-    			var controller = $.superscrollorama();
-    			controller.addTween('#fade-it', TweenMax.from( $('#fade-it'), .5, {css:{opacity: 0}}));
-          controller.addTween('#fade-it-not', TweenMax.from( $('#fade-it-not'), .25, {css:{opacity: 0}}));
-          controller.addTween('#fade-it-not-not', TweenMax.from( $('#fade-it-not-not'), .50, {css:{opacity: 0}}));
-    		});
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("desktopSlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 7000);
+}
 
-$(window).resize(function() {
-        if( $(window).width() < 750 ) {
-        $('[data-scroll-speed]').val("");
-        };
-      });
+/*var width = (window.innerWidth > 0) ? window.innerWidth : screen.Width;
 
-      /*  var rSize;
-
-        $(window).resize(function() {
-          clearTimeout(rSize);
-          rSize = setTimeout(reSizing, 500);
-        });
-
-        function reSizing(){
-          if( $(window).width() > 750 ) {
-            $("#testScriptName").remove();
-           var head = document.getElementsByTagName('head')[0];
-
-           script = document.createElement('script');
-           script.src = "js/data-scroll.js";
-           script.type = "text/javascript";
-           script.id = "testScriptName";
-
-           head.appendChild(script);
+function arrowClass() {
+    var x = document.querySelector('afa-long-arrow-left');
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.Width;
+    console.log(width);
+    if(x.length > 0) {
+        if(width <= 914) {
+            x[1].className ='fa-long-arrow-right';
         } else {
-
-          $("#testScriptName").remove();
-
-
-
+            x[0].className = "fa-long-arrow-left";
         }
-      }*/
-
-    	</script>
+    }
+}*/
+</script>
       <script src="js/app.js"></script>
   </body>
 </html>
