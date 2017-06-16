@@ -344,7 +344,7 @@ a.right-vert{
 @media (max-width: 428px) {
   a.left-vert,a.right-vert{
     width: auto;
-    padding: 12px 10px;
+    padding: 12px 5px;
   }
 }
 
