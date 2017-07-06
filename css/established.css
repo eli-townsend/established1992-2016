@@ -489,10 +489,6 @@ footer {
     text-align: center;
     border-radius: 5px;
   }
-  .contact-info {
-    font-size: 5vw;
-    line-height: 1.5em;
-  }
 }
 
 
@@ -551,8 +547,8 @@ footer {
     text-decoration: none;
   }
   .sbreak {
-    height: 75px;
-    margin-bottom: 75px;
+    height: 100px;
+    margin-bottom: 100px;
   }
   .nbreak {
     margin-bottom: 50px;
