@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" />
       <link rel="stylesheet" href="css/normalize.css"/>
       <link rel="stylesheet" href="css/established.css" />
-
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
    </head>
   <body>
 
@@ -55,15 +55,27 @@
           <div class="sbreak clear-fix"></div>
 
 <div id="desktop-section">
+  <h1 class="center">Featured - Winston Theme</h1>
 <div id="desktop">
   <ul class="desktop-circles">
     <li class="circular-corner" style="background:#ee6b5f;"></li>
     <li class="circular-corner" style="background:#f6bf4f;"></li>
     <li class="circular-corner" style="background:#60c655;"></li>
   </ul>
-  <img class="desktopSlides" src="img/desktop1.jpg" />
-<img class="desktopSlides" src="img/desktop2.jpg" />
-<img class="desktopSlides" src="img/desktop3.jpg" />
+  <a href="winston.html" class="grayscale-hover">
+    <div id="videosList">
+      <div class="video">
+          <video class="thevideo" width="600" loop preload="none">
+            <source src="img/winston-theme.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+
+
+
+  </a>
 </div>
 <a href="workshop.html" class="left-vert button"><i class="fa fa-long-arrow-left fa-3" aria-hidden="true"></i> Visit Workshop</a>
 <a href="projects.html" class="right-vert button"><i class="fa fa-long-arrow-left fa-3" aria-hidden="true"></i> View Projects</a>
@@ -86,19 +98,14 @@
 </footer>
     </div>
 <script>
-var slideIndex = 0;
-carousel();
+var figure = $(".video").hover( hoverVideo, hideVideo );
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("desktopSlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
-    x[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 7000);
+function hoverVideo(e) {
+    $('video', this).get(0).play();
+}
+
+function hideVideo(e) {
+    $('video', this).get(0).pause();
 }
 </script>
       <script src="js/app.js"></script>

@@ -189,6 +189,22 @@ body {
   background: none;
 }
 
+
+#videosList {
+ max-width: 600px;
+  overflow: hidden;
+}
+
+.video {
+  background-image: url('../img/desktop1.jpg');
+  height: 400px;
+  width: 600px;
+}
+
+video::-webkit-media-controls {
+    display:none !important;
+}
+
 /*** SECTIONS ***/
 
 .center-row {
