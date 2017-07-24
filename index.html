@@ -62,20 +62,54 @@
     <li class="circular-corner" style="background:#f6bf4f;"></li>
     <li class="circular-corner" style="background:#60c655;"></li>
   </ul>
-  <a href="winston.html" class="grayscale-hover">
-    <div id="videosList">
+
+<style>
+.video {
+  position:relative;
+  overflow:hidden;
+}
+.video .thevideo {
+}
+
+.video .video-overlay {
+  position:absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  height:auto;
+  z-index:30;
+  background-color:#000;
+  color:#00cc66;
+  -webkit-transform: translate3d(0, -100%,0);
+	transform: translate3d(0, -100%,0);
+  -webkit-transition:0.5s all ease;
+  transition:0.2s all ease;
+  opacity:0.8;
+  padding:0;
+}
+.video .video-overlay a {
+  display:block;
+  text-align:center;
+  padding-top:20%;
+  color:#00cc66;
+}
+.video:hover > .video-overlay {
+  -webkit-transform: translate3d(0, 0%,0);
+	transform: translate3d(0, 0%, 0);
+}
+</style>
+
+
       <div class="video">
           <video class="thevideo" width="600" loop preload="none">
             <source src="img/winston-theme.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video>
-        </div>
+          <div class="video-overlay">
+            <a href="winston.html">See More</a>
+          </div>
       </div>
-
-
-
-
-  </a>
 </div>
 <a href="workshop.html" class="left-vert button"><i class="fa fa-long-arrow-left fa-3" aria-hidden="true"></i> Visit Workshop</a>
 <a href="projects.html" class="right-vert button"><i class="fa fa-long-arrow-left fa-3" aria-hidden="true"></i> View Projects</a>
@@ -122,9 +156,17 @@ function checkScroll() {
             } else {
                 video.pause();
             }
-
     }
+}
 
+var figure = $(".video").hover(pauseVideo, playVideo);
+
+function pauseVideo(e) {
+    $('video', this).get(0).pause();
+}
+
+function playVideo(e) {
+    $('video', this).get(0).play();
 }
 
 window.addEventListener('scroll', checkScroll, false);
