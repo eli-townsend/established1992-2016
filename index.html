@@ -62,52 +62,13 @@
     <li class="circular-corner" style="background:#f6bf4f;"></li>
     <li class="circular-corner" style="background:#60c655;"></li>
   </ul>
-
-<style>
-.video {
-  position:relative;
-  overflow:hidden;
-}
-.video .thevideo {
-}
-
-.video .video-overlay {
-  position:absolute;
-  top:0px;
-  left:0px;
-  right:0px;
-  bottom:0px;
-  height:auto;
-  z-index:30;
-  background-color:#000;
-  color:#00cc66;
-  -webkit-transform: translate3d(0, -100%,0);
-	transform: translate3d(0, -100%,0);
-  -webkit-transition:0.5s all ease;
-  transition:0.2s all ease;
-  opacity:0.8;
-  padding:0;
-}
-.video .video-overlay a {
-  display:block;
-  text-align:center;
-  padding-top:20%;
-  color:#00cc66;
-}
-.video:hover > .video-overlay {
-  -webkit-transform: translate3d(0, 0%,0);
-	transform: translate3d(0, 0%, 0);
-}
-</style>
-
-
       <div class="video">
-          <video class="thevideo" width="600" loop preload="none">
+          <video class="thevideo" preload="auto" autoplay loop="loop">
             <source src="img/winston-theme.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+              Your browser does not support the video tag.
           </video>
           <div class="video-overlay">
-            <a href="winston.html">See More</a>
+            <a href="winston.html">Intrigued?</a>
           </div>
       </div>
 </div>
@@ -134,29 +95,23 @@
 
 
 <script>
-        var videos = document.getElementsByTagName("video"),
-fraction = 0.8;
-function checkScroll() {
+var dasVideo = document.getElementsByClassName('thevideo');
 
-    for(var i = 0; i < videos.length; i++) {
+for (var i = dasVideo.length - 1; i >= 0; i--) {
+	dasVideo[i].pause();
+}
 
-        var video = videos[i];
+window.onscroll = autoplay;
 
-        var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
-            b = y + h, //bottom
-            visibleX, visibleY, visible;
-
-            visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
-            visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
-
-            visible = visibleX * visibleY / (w * h);
-
-            if (visible > fraction) {
-                video.play();
-            } else {
-                video.pause();
-            }
-    }
+function autoplay(){
+    for (var i = dasVideo.length - 1; i >= 0; i--) {
+        var currentYpos = window.pageYOffset || document.documentElement.scrollTop;
+		if ( currentYpos >= dasVideo[i].offsetTop && currentYpos <= dasVideo[i].offsetTop + dasVideo[i].offsetHeight ) {
+			dasVideo[i].pause();
+		}else{
+			dasVideo[i].play();
+		}
+	}
 }
 
 var figure = $(".video").hover(pauseVideo, playVideo);
@@ -168,9 +123,6 @@ function pauseVideo(e) {
 function playVideo(e) {
     $('video', this).get(0).play();
 }
-
-window.addEventListener('scroll', checkScroll, false);
-window.addEventListener('resize', checkScroll, false);
 </script>
       <script src="js/app.js"></script>
   </body>

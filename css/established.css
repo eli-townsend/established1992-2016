@@ -188,21 +188,55 @@ body {
 #main-navigation>#nav-links>a.active-nav-selection:hover {
   background: none;
 }
-
-
-#videosList {
- max-width: 600px;
-  overflow: hidden;
+video{
+  width: 100% !important;
+  height: auto !important;
+}
+video::-webkit-media-controls {
+    display:none !important;
 }
 
 .video {
+  position:relative;
+  overflow:hidden;
   background-image: url('../img/desktop1.jpg');
   height: 400px;
   width: 600px;
 }
+.video .thevideo {
+}
 
-video::-webkit-media-controls {
-    display:none !important;
+.video .video-overlay {
+  position:absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  z-index:30;
+  background-color:#00cc66;
+  color:#fff;
+  -webkit-transform: translate3d(0, -100%,0);
+	transform: translate3d(0, -100%,0);
+  -webkit-transition:0.4s all ease;
+  transition:0.4s all ease;
+  opacity:0.9;
+  padding:0;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.video .video-overlay a {
+  color:#fff;
+  font-size: 2em;
+  display: block;
+  text-align: center;
+  padding-top: 50%;
+  width: 100%;
+  height:100%;
+}
+.video:hover > .video-overlay {
+  -webkit-transform: translate3d(0, 0%,0);
+	transform: translate3d(0, 0%, 0);
 }
 
 /*** SECTIONS ***/
@@ -568,6 +602,18 @@ footer {
   }
   .nbreak {
     margin-bottom: 50px;
+  }
+}
+
+@media(max-width: 675px){
+  .video{
+    width: 100%;
+    height: auto;
+  }
+  .video .video-overlay {
+    display: none;
+   justify-content: center;
+   align-items: center;
   }
 }
 
