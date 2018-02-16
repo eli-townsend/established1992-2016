@@ -8,9 +8,8 @@
     <meta name="keywords" content="HTML,CSS,Elijah,Townsend,Developer,JavaScript, Front, End, Portfolio, UI, UX, Designer, Experience, User, Interface">
     <meta name="author" content="Elijah Townsend">
     <title>Est.1992 - Elijah Townsend</title>
-      <link rel="stylesheet" href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
       <link rel="stylesheet" href="css/normalize.css"/>
-      <link rel="stylesheet" href="css/foundation.min.css" />
       <link rel="stylesheet" href="css/established.css" />
    </head>
   <body>
@@ -20,7 +19,7 @@
                 <a href="index.html" class="active-nav-selection">Home</a>
                 <a href="workshop.html">Workshop</a>
                 <a href="projects.html">Projects</a>
-                <a href="journal.html">Journal</a>
+                <a href="http://blog.established1992.com/" target="_blank">Journal</a>
             </div>
         </div>
 
@@ -52,7 +51,7 @@
 				</div>
 	</div>
 
-          <div class="sbreak clear-fix"></div>
+          <div class="nbreak clear-fix"></div>
 
 <div id="desktop-section">
   <h1 class="center">Featured - Winston Theme</h1>
@@ -106,7 +105,7 @@ window.onscroll = autoplay;
 function autoplay(){
     for (var i = dasVideo.length - 1; i >= 0; i--) {
         var currentYpos = window.pageYOffset || document.documentElement.scrollTop;
-		if ( currentYpos >= dasVideo[i].offsetTop && currentYpos <= dasVideo[i].offsetTop + dasVideo[i].offsetHsmall-12 medium-8 ) {
+		if ( currentYpos >= dasVideo[i].offsetTop && currentYpos <= dasVideo[i].offsetTop + dasVideo[i].offsetHeight ) {
 			dasVideo[i].pause();
 		}else{
 			dasVideo[i].play();
