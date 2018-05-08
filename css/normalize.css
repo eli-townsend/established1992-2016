@@ -61,12 +61,12 @@ video {
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess hsmall-12 medium-8 in iOS 5 devices.
+ * Remove excess height in iOS 5 devices.
  */
 
 audio:not([controls]) {
   display: none;
-  hsmall-12 medium-8: 0;
+  height: 0;
 }
 
 /**
@@ -116,7 +116,7 @@ abbr[title] {
 
 b,
 strong {
-  font-wsmall-12 medium-8: bold;
+  font-weight: bold;
 }
 
 /**
@@ -155,13 +155,13 @@ small {
 }
 
 /**
- * Prevent `sub` and `sup` affecting `line-hsmall-12 medium-8` in all browsers.
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
 
 sub,
 sup {
   font-size: 75%;
-  line-hsmall-12 medium-8: 0;
+  line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
@@ -211,7 +211,7 @@ figure {
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  hsmall-12 medium-8: 0;
+  height: 0;
 }
 
 /**
@@ -315,12 +315,12 @@ input::-moz-focus-inner {
 }
 
 /**
- * Address Firefox 4+ setting `line-hsmall-12 medium-8` on `input` using `!important` in
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
 
 input {
-  line-hsmall-12 medium-8: normal;
+  line-height: normal;
 }
 
 /**
@@ -345,7 +345,7 @@ input[type="radio"] {
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  hsmall-12 medium-8: auto;
+  height: auto;
 }
 
 /**
@@ -401,12 +401,12 @@ textarea {
 }
 
 /**
- * Don't inherit the `font-wsmall-12 medium-8` (applied by a rule above).
+ * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
 
 optgroup {
-  font-wsmall-12 medium-8: bold;
+  font-weight: bold;
 }
 
 /* Tables
